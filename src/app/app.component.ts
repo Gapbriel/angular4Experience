@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import {MdToolbarModule} from '@angular/material';
 
 @Component({
   encapsulation: ViewEncapsulation.None,

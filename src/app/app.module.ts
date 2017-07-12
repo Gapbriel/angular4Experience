@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 import { ExampleFeatureModule } from './example-feature/example-feature.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -14,7 +16,13 @@ import { ExampleFeatureModule } from './example-feature/example-feature.module';
     HttpModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    ExampleFeatureModule
+    ExampleFeatureModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdMenuModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdIconModule
   ],
   declarations: [
     AppComponent,
