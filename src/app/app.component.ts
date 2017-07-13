@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import {MdToolbarModule} from '@angular/material';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -7,10 +6,5 @@ import {MdToolbarModule} from '@angular/material';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent {
-  public greeting = 'Hello Deloitte!';
+export class AppComponent {}
 
-  changeGreeting() {
-    this.greeting = 'You button-clicker!';
-  }
-}

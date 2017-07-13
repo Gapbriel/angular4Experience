@@ -19,7 +19,7 @@ module.exports = {
       {
         //Our typescript. Load TS and then prepare your Angular 2 files to be loaded other styles
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader','angular2-router-loader']
       },
       {
         //Nothing too fancy here.
