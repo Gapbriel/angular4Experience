@@ -20,35 +20,35 @@ export class ArtistService {
     }
 
     searchArtistByName(name: string) {
-        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.token});
+        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.access_token});
         let options = new RequestOptions({ headers: headers} );
         let apiUrl = this.appConfig.url + 'search?q=' + name + '&type=artist';
         return this.http.get(apiUrl, options).map(res => res.json());
     }
 
     getArtist(id: string) {
-        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.token});
+        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.access_token});
         let options = new RequestOptions({ headers: headers} );
         let apiUrl = this.appConfig.url + 'artists/' + id;
         return this.http.get(apiUrl, options).map(res => res.json());
     }
 
     getArtistAlbums(id: string) {
-        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.token});
+        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.access_token});
         let options = new RequestOptions({ headers: headers} );
         let apiUrl = this.appConfig.url + 'artists/' + id + '/albums';
         return this.http.get(apiUrl, options).map(res => res.json());
     }
 
     getAlbumById(id: string) {
-        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.token});
+        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.access_token});
         let options = new RequestOptions({ headers: headers} );
         let apiUrl = this.appConfig.url + 'albums/' + id;
         return this.http.get(apiUrl, options).map(res => res.json());
     }
 
     getTracksById(ids: string) {
-        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.token});
+        let headers = new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer ' + this.appConfig.access_token});
         let options = new RequestOptions({ headers: headers} );
         let apiUrl = this.appConfig.url + 'tracks?ids=' + ids;
         return this.http.get(apiUrl, options).map(res => res.json());
