@@ -6,6 +6,7 @@ import { MdIconModule,MdProgressBarModule,MdInputModule } from '@angular/materia
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { InputSearchComponent } from '../../shared';
+import { ArtistService } from '../../services/artist.services';
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import { InputSearchComponent } from '../../shared';
     declarations: [
         HomeComponent,
         InputSearchComponent
-    ]
+    ],
+    providers: [ArtistService]
 })
 export class HomeModule { }

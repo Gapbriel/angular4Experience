@@ -1,4 +1,8 @@
 <md-progress-bar mode="query"></md-progress-bar>
 <div class="container">
-	<input-search></input-search>
+    <input-search></input-search>
+    <br>
+    <ul>
+        <li *ngFor="let artist of favArtists">{{artist.name}}</li>
+    </ul>
 </div>

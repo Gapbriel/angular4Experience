@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+import { AppConfig } from './app.config';
 
 @NgModule({
   imports: [
@@ -24,5 +25,6 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
     AppComponent
   ],
   bootstrap: [AppComponent],
+  providers: [AppConfig]
 })
 export class AppModule { }
