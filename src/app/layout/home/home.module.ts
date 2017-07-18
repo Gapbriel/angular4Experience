@@ -22,4 +22,4 @@ import { ArtistService } from '../../services/artist.services';
     ],
     providers: [ArtistService]
 })
-export class HomeModule { }
+export class HomeModule {}

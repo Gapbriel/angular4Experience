@@ -6,4 +6,7 @@ import { MdInputModule} from '@angular/material';
   templateUrl: './input-search.component.html',
   styleUrls: ['./input-search.component.less']
 })
-export class InputSearchComponent {}
+export class InputSearchComponent {
+	@Output('searchInputEvent') 
+	searchEvent:new EventEmitter<string>();
+}

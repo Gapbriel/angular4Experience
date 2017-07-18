@@ -13,13 +13,29 @@ export class HomeComponent  implements OnInit{
 	){}
 
     ngOnInit() {
-        this.searchArtists();
+       //this.searchArtists();
     }
 
-	searchArtists() {
-        this.search = "pink";
-        this.artistService.searchArtistByName(this.search).subscribe( res => {
-            this.favArtists = res.artists.items;
-        });
-    }
+   this.search.valueChanges
+        .flatMap(data => this.artistService.searchArtistByName(data.search))
+        .subscribe(
+            data =>{
+                this.favArtists = data;
+            }
+        );
+
+	//searchArtists() {
+        //this.search = "pink";
+        // this.artistService.searchArtistByName(this.search).subscribe( res => {
+        //     this.favArtists = res.artists.items;
+        // });
+    //     this.search.valueChanges
+    //     .flatMap(data => this.artistService.searchArtistByName(data.search))
+    //     .subscribe(
+    //         data =>{
+    //             this.favArtists = data;
+    //         }
+    //     )
+        
+    // }
 }
