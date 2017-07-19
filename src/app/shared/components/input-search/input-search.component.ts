@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter} from '@angular/core';
 import { MdInputModule} from '@angular/material';
 
 @Component({
@@ -7,6 +7,10 @@ import { MdInputModule} from '@angular/material';
   styleUrls: ['./input-search.component.less']
 })
 export class InputSearchComponent {
-	@Output('searchInputEvent') 
-	searchEvent:new EventEmitter<string>();
+	@Output() 
+	searchInputEvent : EventEmitter<string> =  new EventEmitter<string>();
+	values = '';
+	onKey(value: string) {
+    	this.searchInputEvent.emit(value);
+  	}	
 }
