@@ -1,8 +1,12 @@
 <md-progress-bar mode="query"></md-progress-bar>
-<div class="container">
+<section class="homeSearchcontainer">
     <input-search (searchInputEvent)="searchEvent($event)" ></input-search>
-    <br>
-    <ul>
-        <li *ngFor="let artist of favArtists">{{artist.name}}</li>
-    </ul>
-</div>
+</section>
+<br>
+<section class="artistListContainer">
+<!-- 	<ul>
+	    <li *ngFor="let artist of favArtists">{{artist.name}}</li>
+	</ul> -->
+	<card-list-spotify [data]="favArtists" *ngIf="!!favArtists"></card-list-spotify>
+	<div>No hay artitas vieja</div>
+</section>

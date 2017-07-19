@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MdIconModule,MdProgressBarModule,MdInputModule } from '@angular/material';
 
-
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { InputSearchComponent } from '../../shared';
+import { InputSearchComponent,CardComponent,CardListComponent} from '../../shared';
 import { ArtistService } from '../../services/artist.services';
 
 @NgModule({
@@ -14,7 +13,9 @@ import { ArtistService } from '../../services/artist.services';
         HomeRoutingModule,
         MdIconModule,
         MdProgressBarModule,
-        MdInputModule
+        MdInputModule,
+        CardComponent,
+        CardListComponent
     ],
     declarations: [
         HomeComponent,

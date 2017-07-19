@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { MdToolbarModule} from '@angular/material';
 import { LayoutComponent } from './layout.component';
-import { HeaderBarComponent,InputSearchComponent} from '../shared';
+import { HeaderBarComponent,CardComponent,CardListComponent} from '../shared';
 
 @NgModule({
     imports: [
