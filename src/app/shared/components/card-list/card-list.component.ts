@@ -4,6 +4,6 @@ import {Component,Input} from '@angular/core';
   templateUrl: 'card-list.component.html',
   styleUrls: ['card-list.component.less'],
 })
-export class CardListComponent {
-	@Input() data: any[];
+export class CardListComponent{
+	@Input() data: object[];
 }

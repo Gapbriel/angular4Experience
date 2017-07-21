@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { HomeComponent } from './home/home.component';
+import {ArtistComponent} from './artist/artist.component';
+
 
 const routes: Routes = [
     {
         path: '', component: LayoutComponent,
         children: [
-            { path: 'home', loadChildren: './home/home.module#HomeModule' },
-            // { path: 'home', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+            { path: 'home', component:HomeComponent},//loadChildren: './home/home.module#HomeModule' },
+            { path: 'artist', component: ArtistComponent }
             // { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             // { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             // { path: 'forms', loadChildren: './form/form.module#FormModule' },
