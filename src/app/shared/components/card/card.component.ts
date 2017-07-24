@@ -15,10 +15,10 @@ export class CardComponent implements OnInit {
 				this.imgSrc =  !!(this.data["images"].length) ? (this.data["images"][0].url) : null;
 				switch (this.data["type"]) {
 					case "artist":
-						this.link = '/artist/detail/' + this.id;
+						this.link = '/artist/detail/' + this.data["id"];
 						break;
 					case "album":
-						this.link = '/album/' + this.id;
+						this.link = '/album/' + this.data["id"];
 						break;
 				}
 			}

@@ -10,7 +10,7 @@ const routes: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'home', component:HomeComponent},//loadChildren: './home/home.module#HomeModule' },
-            { path: 'artist', component: ArtistComponent }
+            { path: 'artist/detail/:id', component: ArtistComponent }
             // { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             // { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             // { path: 'forms', loadChildren: './form/form.module#FormModule' },
