@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import {ArtistComponent} from './artist/artist.component';
 import { InputSearchComponent,CardComponent,CardListComponent} from '../shared';
 import { ArtistService } from '../services/artist.services';
+import {AlbumComponent} from './album/album.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import { ArtistService } from '../services/artist.services';
         InputSearchComponent,
         CardComponent,
         CardListComponent,
-        ArtistComponent
+        ArtistComponent,
+        AlbumComponent
     ],
     providers: [ArtistService]
 })

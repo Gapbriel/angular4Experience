@@ -1,8 +1,11 @@
 <md-progress-bar mode="query"></md-progress-bar>
 <section class="artistContainer">
-    <h1>Artist</h1>
+    <h1>Album</h1>
 </section>
 <br>
 <section class="artistListContainer">
-	<card-list-spotify [data]="albums" *ngIf="!!albums"></card-list-spotify> 
+	<!-- <card-list-spotify [data]="traks" *ngIf="!!traks"></card-list-spotify>  -->
+	<ul>
+		<li *ngFor="let item of tracks">{{item.name}}</li>
+	</ul>
 </section>
