@@ -1,0 +1,8 @@
+<md-progress-bar mode="query"></md-progress-bar>
+<section class="artistContainer">
+    <h1>Artist</h1>
+</section>
+<br>
+<section class="artistListContainer">
+	<card-list-spotify [data]="albums" *ngIf="!!albums"></card-list-spotify> 
+</section>
