@@ -17,6 +17,10 @@ export class AlbumComponent implements OnInit{
 
     getAlbumById(id:string){
         this.artistService.getAlbumById(id)
+        .map((value,index) => {
+            debugger;
+            return value;
+        })
         .subscribe( res => {
             this.tracks = res.tracks.items;
         });
@@ -30,7 +34,8 @@ export class AlbumComponent implements OnInit{
     // }
 
     ngOnInit(){
-        this.route.params.subscribe( params => {
+        this.route.params
+        .subscribe( params => {
             this.getAlbumById(params['id']);
         });    
     }
