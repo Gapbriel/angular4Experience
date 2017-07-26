@@ -7,7 +7,7 @@ import { LayoutComponent } from './layout.component';
 import { HeaderBarComponent} from '../shared';
 import { HomeComponent } from './home/home.component';
 import {ArtistComponent} from './artist/artist.component';
-import { InputSearchComponent,CardComponent,CardListComponent} from '../shared';
+import { InputSearchComponent,CardComponent,CardListComponent,DiscTableListComponent,DiscTableComponent} from '../shared';
 import { ArtistService } from '../services/artist.services';
 import {AlbumComponent} from './album/album.component';
 
@@ -28,7 +28,9 @@ import {AlbumComponent} from './album/album.component';
         CardComponent,
         CardListComponent,
         ArtistComponent,
-        AlbumComponent
+        AlbumComponent,
+        DiscTableListComponent,
+        DiscTableComponent
     ],
     providers: [ArtistService]
 })

@@ -4,7 +4,7 @@ import { MdIconModule,MdProgressBarModule,MdInputModule,MdCardModule} from '@ang
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { InputSearchComponent,CardComponent,CardListComponent} from '../../shared';
+import { InputSearchComponent,CardComponent,CardListComponent,DiscTableListComponent,DiscTableComponent} from '../../shared';
 import { ArtistService } from '../../services/artist.services';
 
 @NgModule({
@@ -19,7 +19,9 @@ import { ArtistService } from '../../services/artist.services';
         HomeComponent,
         InputSearchComponent,
         CardComponent,
-        CardListComponent
+        CardListComponent,
+        DiscTableListComponent,
+        DiscTableComponent
     ],
     providers: [ArtistService]
 })
