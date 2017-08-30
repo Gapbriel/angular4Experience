@@ -53,4 +53,26 @@ export class ArtistService {
         let apiUrl = this.appConfig.url + 'tracks?ids=' + ids;
         return this.http.get(apiUrl, options).map(res => res.json());
     }
+
+    processMaxAlbums(albums:Object[]){
+        let max=0;
+        var arrAlbums=[];
+        albums.forEach(function (argument) {
+             if (max <= argument['disc_number']){
+                 max = argument['disc_number'];
+             }
+        });
+
+        for (let i = 1; i <= max; i++) {
+            var newArr = albums.filter(function(item){
+                return item['disc_number'] === i;
+            });
+            var album = {
+                discNumber : i,
+                tracksItems : newArr
+            }
+            arrAlbums.push(album);
+        }    
+        return arrAlbums;
+    }
 }
