@@ -1,15 +1,13 @@
-<div>
-	<div>
-		CD 1
+<div class="disc-container">
+	<div class="disc-number-header">
+		CD {{data.discNumber}}
 	</div>
-	<table>
-	  <tr>
-	    <td>First name</td>
-	    <td>X</td>
-	  </tr>
-	  <tr>
-	    <td>John</td>
-	    <td>X</td>
-	  </tr>
-	</table>
+	<div>
+		<table>
+		  <tr *ngFor="let track of data.tracksItems">
+		    <td>{{track.name}}</td>
+		    <td>X</td>
+		  </tr>
+		</table>
+	</div>	
 </div>

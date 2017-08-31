@@ -26,6 +26,7 @@ export class ArtistComponent implements OnInit{
         this.artistService.getArtist(id)
         .subscribe( res => {
             this.artistInfo = res;
+            debugger;
         });
     }
 

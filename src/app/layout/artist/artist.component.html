@@ -1,6 +1,8 @@
-<md-progress-bar mode="query"></md-progress-bar>
+<!-- <md-progress-bar mode="query"></md-progress-bar> -->
 <section class="artistContainer">
-    <h1>Artist</h1>
+    <!-- <h1>{{artistInfo.name}}</h1> -->
+    <card [data]="artistInfo">
+	</card>
 </section>
 <br>
 <section class="artistListContainer">

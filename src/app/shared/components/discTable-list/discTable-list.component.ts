@@ -13,7 +13,6 @@ export class DiscTableListComponent implements OnInit{
 	){}
 
 	ngOnInit(){
-		console.log(this.data);
 	}
 
 }
